@@ -1,0 +1,518 @@
+        body {
+            line-height: 1.5;
+            margin: 0;
+            color: white;
+            background-color: white;
+        }
+        
+        h1,
+        p {
+            margin-block-start: 0;
+            margin-block-end: 0;
+            margin-inline-start: 0;
+            margin-inline-end: 0;
+        }
+        /*@font-face {
+font-family: "LiquidCrystal";
+src: url("/Board/templates/fonts/liquidcr.eot?") format("eot"),url("/Board/templates/fonts/liquidcr.woff") format("woff"),url("/Board/templates/fonts/liquidcr.ttf") format("truetype"),url("/Board/templates/fonts/liquidcr.svg#LiquidCrystal") format("svg");
+font-weight:normal;
+font-style:normal;
+}*/
+        /* @font-face {
+            font-family: "LCD";
+            src: url("/Board/templates/fonts/LCD.ttf") format("truetype");
+            font-weight: normal;
+            font-style: normal;
+        } */
+        
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+        .banner {
+            margin: 0;
+            width: 384px;
+            height: 1152px;
+            position: relative;
+            overflow: hidden;
+            /* background-color: #007926; */
+            background-color: #055424;
+            /*background-image: url('/Board/templates/img/BP/BP_new.jpg');*/
+        }
+        
+        .sp {
+            font-family: "LCD";
+            font-size: 50px;
+        }
+        
+        #price_tablo {
+            position: absolute;
+            top: 430px;
+            width: 384px;
+            /*height: 460px;*/
+            /* background: #055424; */
+            background-color: #222;
+            padding: 5px 0;
+            z-index: 2;
+        }
+        
+        .gasDiv {
+            padding: 5px 10px;
+        }
+        
+        .gasDiv>div {
+            display: flex;
+            background: black;
+            text-align: center;
+        }
+        
+        .gasName {
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 45px;
+            color: white;
+            line-height: 80px;
+            width: 90px;
+            height: 80px;
+        }
+        
+        .gasPrice {
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            font-family: 'LCD';
+            background: black;
+            color: white;
+            font-size: 80px;
+            line-height: 80px;
+            letter-spacing: 15px;
+            width: 270px;
+        }
+        
+        .inlineBlock {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        
+        .backgroundAnim {
+            position: absolute;
+            inset: 0;
+        }
+        
+        .background__svg {
+            position: absolute;
+            z-index: 1;
+        }
+        
+        .background__svg--line {
+            z-index: 2;
+        }
+        
+        .background__svg--line path {
+            animation: backLineAnim 11s linear infinite;
+        }
+        
+        .logo {
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .logo__first--part,
+        .logo__second--part,
+        .logo__third--part {
+            position: relative;
+        }
+        
+        .logo__first--part--anim,
+        .logo__second--part--anim,
+        .logo__third--part--anim {
+            position: absolute;
+            inset: 0;
+        }
+        
+        .logo__circle--group {
+            transform-origin: center;
+            animation: circleGroupAnim 13s linear infinite;
+        }
+        
+        .logo__circle:first-child {
+            transform-origin: center;
+            animation: firstCircle 13s linear infinite;
+        }
+        
+        .logo__circle:nth-child(2) {
+            animation: secondCircle 13s linear infinite;
+        }
+        
+        .logo__circle:last-child {
+            animation: thirdCircle 13s linear infinite;
+            transform-origin: center;
+        }
+        
+        .logo__first--part {
+            clip-path: url(#myClip1);
+        }
+        
+        .logo__second--part {
+            clip-path: url(#myClip2);
+        }
+        
+        .logo__third--part {
+            clip-path: url(#myClip3);
+        }
+        
+        #myClip1 rect,
+        #myClip2 rect {
+            transform-origin: center;
+            transform: rotateZ(180deg);
+        }
+        
+        #myClip1 rect {
+            animation: animClipHeightFirst 13s linear infinite;
+        }
+        
+        #myClip2 rect {
+            animation: animClipWidth 13s linear infinite;
+        }
+        
+        #myClip3 rect {
+            transform-origin: center;
+            transform: rotateZ(-23deg);
+            animation: animClipHeightThird 13s linear infinite;
+        }
+        
+        .title {
+            text-align: center;
+            font-family: 'Ubuntu Bold';
+            font-size: 39px;
+            line-height: unset;
+            letter-spacing: -0.1em;
+        }
+        
+        .title__letter {
+            display: inline-block;
+        }
+        
+        .title__firstLine,
+        .title__secondLine {
+            overflow: hidden;
+        }
+        
+        .title__secondLine {
+            width: 104%;
+        }
+        
+        .title__firstLine .title__letter {
+            transform: translateY(100%);
+            transform-origin: bottom;
+        }
+        
+        .title__secondLine .title__letter {
+            transform: translateY(-100%);
+            transform-origin: top;
+        }
+        
+        .crossLine {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        .crossLine__content {
+            flex: 0 0 100%;
+            font-family: 'Ubuntu Bold Italic';
+            font-size: 64px;
+        }
+        
+        .crossLine__content {
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            border-top-left-radius: 50px;
+        }
+        
+        .crossLine__content:nth-child(3) {
+            position: relative;
+            width: 95%;
+            margin-left: auto;
+            overflow: hidden;
+            background-color: #e31e25;
+            font-size: 17px;
+            text-align: left;
+            font-family: 'Ubuntu';
+            font-style: italic;
+        }
+        
+        .crossLine__content:nth-child(3) div {
+            position: absolute;
+            left: 23%;
+            z-index: 1;
+        }
+        
+        .crossLine__content:nth-child(3) img {
+            position: absolute;
+            right: -3.6%;
+            z-index: 0;
+        }
+        
+        .crossLine .crossLine__content:first-child {
+            animation: crossAnimFirst 15s linear infinite;
+        }
+        
+        .crossLine .crossLine__content:nth-child(2) {
+            animation: crossAnimSecond 15s linear infinite;
+        }
+        
+        .crossLine .crossLine__content:last-child {
+            animation: crossAnimThird 15s linear infinite;
+        }
+        
+        #addInf {
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        
+        .anAddInfo {
+            animation: iconsAnimSecond 12s linear infinite;
+        }
+        
+        .anAddInfo:first-child {
+            animation: iconsAnimFirst 12s linear infinite;
+        }
+        
+        .anAddInfo:last-child {
+            animation: iconsAnimThird 12s linear infinite;
+        }
+        
+        .anAddInfo__container {
+            position: relative;
+        }
+        
+        .anAddInfo__container::after {
+            position: absolute;
+            content: '';
+            inset: 0;
+            transform: rotateZ(-45deg) translateX(-110%);
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4));
+        }
+        
+        @keyframes anAddInfo {
+            0% {
+                -webkit-transform: translateY(0px);
+                -moz-transform: translateY(0px);
+                transform: translateY(0px);
+            }
+            7% {
+                -webkit-transform: translateY(25px);
+                -moz-transform: translateY(25px);
+                transform: translateY(25px);
+            }
+            8% {
+                -webkit-transform: translateY(25px);
+                -moz-transform: translateY(25px);
+                transform: translateY(25px);
+            }
+            13% {
+                -webkit-transform: translateY(0px);
+                -moz-transform: translateY(0px);
+                transform: translateY(0px);
+            }
+            40% {
+                -webkit-transform: translateY(0px);
+                -moz-transform: translateY(0px);
+                transform: translateY(0px);
+            }
+            100% {
+                -webkit-transform: translateY(0px);
+                -moz-transform: translateY(0px);
+                transform: translateY(0px);
+            }
+        }
+        
+        @keyframes backLineAnim {
+            14% {
+                -webkit-stroke-dashoffset: 118%;
+                -moz-stroke-dashoffset: 118%;
+                stroke-dashoffset: 118%;
+            }
+            16% {
+                -webkit-stroke-dashoffset: 50%;
+                -moz-stroke-dashoffset: 50%;
+                stroke-dashoffset: 50%;
+            }
+            30%,
+            100% {
+                -webkit-stroke-dashoffset: 0%;
+                -moz-stroke-dashoffset: 0%;
+                stroke-dashoffset: 0%;
+            }
+        }
+        
+        @keyframes circleGroupAnim {
+            0% {
+                transform: scale(0);
+            }
+            5% {
+                transform: scale(1) rotateZ(0deg);
+            }
+            7.5% {
+                transform: rotateZ(90deg);
+            }
+            9.17% {
+                transform: rotateZ(180deg);
+            }
+            11.67%,
+            100% {
+                transform: rotateZ(270deg);
+            }
+            16% {
+                opacity: 1;
+            }
+            17%,
+            100% {
+                opacity: 0;
+            }
+        }
+        
+        @keyframes firstCircle {
+            0%,
+            9.17% {
+                transform: rotateZ(0deg);
+            }
+            11.67%,
+            100% {
+                transform: rotateZ(-90deg);
+            }
+        }
+        
+        @keyframes secondCircle {
+            0%,
+            5% {
+                transform: translate(0%, 0%);
+            }
+            7.5%,
+            100% {
+                transform: translate(0%, 18%);
+            }
+        }
+        
+        @keyframes thirdCircle {
+            0%,
+            12.5% {
+                transform: rotateZ(0deg)
+            }
+            15%,
+            100% {
+                transform: rotateZ(90deg);
+            }
+        }
+        
+        @keyframes animClipHeightFirst {
+            18% {
+                height: 0px;
+            }
+            23%,
+            100% {
+                height: 184px;
+            }
+        }
+        
+        @keyframes animClipHeightThird {
+            0%,
+            12% {
+                height: 0;
+            }
+            17%,
+            100% {
+                height: 100px;
+            }
+        }
+        
+        @keyframes animClipWidth {
+            15% {
+                width: 0px;
+            }
+            20%,
+            100% {
+                width: 115px;
+            }
+        }
+        
+        @keyframes crossAnimFirst {
+            0% {
+                transform: translateX(100%);
+            }
+            5%,
+            30% {
+                transform: translateX(0%);
+            }
+            35%,
+            100% {
+                transform: translateX(-110%);
+            }
+        }
+        
+        @keyframes crossAnimSecond {
+            0%,
+            35% {
+                transform: translateX(0%);
+            }
+            40%,
+            63% {
+                transform: translateX(-98%);
+            }
+            68%,
+            100% {
+                transform: translateX(-204%);
+            }
+        }
+        
+        @keyframes crossAnimThird {
+            0% {
+                transform: translateX(0%);
+            }
+            40%,
+            66% {
+                transform: translateX(-98%);
+            }
+            71%,
+            95% {
+                transform: translateX(-200%);
+            }
+            100% {
+                transform: translateX(-304%);
+            }
+        }
+        
+        @keyframes iconsAnimFirst {
+            0% {
+                transform: rotateZ(-30deg) scale(0);
+            }
+            8%,
+            100% {
+                transform: rotateZ(0deg) scale(1);
+            }
+        }
+        
+        @keyframes iconsAnimSecond {
+            0%,
+            4% {
+                transform: rotateZ(-30deg) scale(0);
+            }
+            12%,
+            100% {
+                transform: rotateZ(0deg) scale(1);
+            }
+        }
+        
+        @keyframes iconsAnimThird {
+            0%,
+            8% {
+                transform: rotateZ(-30deg) scale(0);
+            }
+            14%,
+            100% {
+                transform: rotateZ(0deg) scale(1);
+            }
+        }

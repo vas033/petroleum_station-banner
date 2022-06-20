@@ -1,0 +1,25 @@
+<svg width="76" height="79" viewBox="0 0 100 103" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+    <linearGradient id="linear-gradient"  x1="0" y1="0" x2="-100%" y2="100%" >
+      <stop offset="0%" stop-color="transparent" />
+      <stop offset="30%" stop-color="transparent" />
+      <stop offset="50%" stop-color="white" />
+      <stop offset="70%" stop-color="transparent" />
+      <stop offset="100%" stop-color="transparent" />
+	  
+      <animateTransform attributeName="gradientTransform" 
+        type="translate"
+        values="-12 0;32 0"       
+	fill="freeze"
+        dur="12s"
+        repeatCount="indefinite"/>
+    </linearGradient>
+  </defs> 
+<g fill="url(#linear-gradient)">
+<path d="M79.7577 2H20.2423C10.1674 2 2 9.81036 2 19.4449V83.5551C2 93.1896 10.1674 101 20.2423 101H79.7577C89.8326 101 98 93.1896 98 83.5551V19.4449C98 9.81036 89.8326 2 79.7577 2Z"/>
+</g>
+<path d="M79.7577 2H20.2423C10.1674 2 2 9.81036 2 19.4449V83.5551C2 93.1896 10.1674 101 20.2423 101H79.7577C89.8326 101 98 93.1896 98 83.5551V19.4449C98 9.81036 89.8326 2 79.7577 2Z" stroke="white" stroke-width="2.402"/>
+<path d="M74.1397 26L25 26.4979V49.8207C25 54.7435 26.9335 70 48.3399 70C71.2936 70 72.7555 58.1451 72.7555 58.1451C72.7555 58.1451 87 57.619 87 44.7504C87 30.7326 74.1397 28.2501 74.1397 28.2501V26ZM66.6721 33.5909C66.6721 33.5909 66.5447 44.1483 66.5447 49.9137C66.5447 55.6789 64.6911 63.2792 48.7164 63.2792C33.8186 63.2792 32.4705 52.9851 32.4705 49.6633V33.9285L66.6721 33.5909ZM74.1284 34.8978C74.1284 34.8978 80.4892 36.1362 80.4892 43.4725C80.4892 50.8087 74.1284 51.5174 74.1284 51.5174V34.8978Z" fill="white"/>
+<path d="M13.1026 72H87.9879C88.1525 73.8742 86.6389 76.6982 83.5276 78H18.3844C15.5171 76.9316 12.3907 74.7534 13.1026 72Z" fill="white"/>
+</svg>
+
