@@ -89,8 +89,7 @@ font-style:normal;
             display: inline-block;
             vertical-align: middle;
         }
-        
-        .backgroundAnim {
+        /* #backgroundAnim {
             position: absolute;
             inset: 0;
         }
@@ -106,7 +105,7 @@ font-style:normal;
         
         .background__svg--line path {
             animation: backLineAnim 11s linear infinite;
-        }
+        } */
         
         .logo {
             margin-left: auto;
